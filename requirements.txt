@@ -5,4 +5,4 @@ numpy
 jdatetime
 openpyxl
 Pillow
-kaleido
+kaleido==0.2.1
