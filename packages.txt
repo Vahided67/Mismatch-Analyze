@@ -1,3 +1,2 @@
-chromium-browser
-chromium-chromedriver
-libgl1-mesa-glx
+chromium
+chromium-driver
