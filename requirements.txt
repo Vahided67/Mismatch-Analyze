@@ -1,5 +1,8 @@
 streamlit
 pandas
 plotly
-openpyxl
+numpy
 jdatetime
+openpyxl
+Pillow
+kaleido
