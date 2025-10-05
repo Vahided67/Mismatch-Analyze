@@ -75,12 +75,17 @@ st.markdown("""
     }
     
     .info-box {
-        background: white;
-        padding: 20px;
-        border-radius: 15px;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        border-left: 5px solid #667eea;
-        margin: 10px 0;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border-left: 5px solid #667eea;
+    margin: 10px 0;
+    /* کدهای جدید زیر را اضافه کنید */
+    height: 150px; /* یک ارتفاع ثابت برای همه کادرها */
+    display: flex; /* فعال کردن Flexbox برای چیدمان بهتر */
+    flex-direction: column; /* چیدن آیتم‌ها زیر هم */
+    justify-content: center; /* محتوا را در مرکز عمودی قرار می‌دهد */
     }
     
     .stTabs [data-baseweb="tab-list"] {
@@ -1419,7 +1424,7 @@ def main():
             st.markdown(f"""
                 <div class='info-box' style='text-align: center;'>
                     <h4>📋 مجموع مغایرت‌ها</h4>
-                    <h2 style='color: #e74c3c; margin: 10px 0;'>{stats['total_issues']:,}</h2>
+                    <h3 style='color: #e74c3c; margin: 6px 0; font-size: 28px;'>{stats['total_issues']:,}</h3>
                 </div>
             """, unsafe_allow_html=True)
         
@@ -1429,7 +1434,7 @@ def main():
                 st.markdown(f"""
                     <div class='info-box' style='text-align: center;'>
                         <h4>📈 میانگین پیشرفت</h4>
-                        <h2 style='color: #3498db; margin: 10px 0;'>{avg_progress:.1f}%</h2>
+                        <h3 style='color: #3498db; margin: 6px 0;'>{avg_progress:.1f}%</h3>
                     </div>
                 """, unsafe_allow_html=True)
         
@@ -1439,7 +1444,7 @@ def main():
                 st.markdown(f"""
                     <div class='info-box' style='text-align: center;'>
                         <h4>✅ رفع شده</h4>
-                        <h2 style='color: #2ecc71; margin: 10px 0;'>{total_resolved:,}</h2>
+                        <h3 style='color: #2ecc71; margin: 6px 0;'>{total_resolved:,}</h3>
                     </div>
                 """, unsafe_allow_html=True)
         
@@ -1449,7 +1454,7 @@ def main():
                 st.markdown(f"""
                     <div class='info-box' style='text-align: center;'>
                         <h4>🔁 تکراری و فعال</h4>
-                        <h2 style='color: #f39c12; margin: 10px 0;'>{not_resolved:,}</h2>
+                        <h3 style='color: #f39c12; margin: 6px 0;'>{not_resolved:,}</h3>
                     </div>
                 """, unsafe_allow_html=True)
         
@@ -1458,7 +1463,7 @@ def main():
                 st.markdown(f"""
                     <div class='info-box' style='text-align: center;'>
                         <h4>🆕 جدید</h4>
-                        <h2 style='color: #9b59b6; margin: 10px 0;'>{len(new_issues_df):,}</h2>
+                        <h3 style='color: #9b59b6; margin: 6px 0;'>{len(new_issues_df):,}</h3>
                     </div>
                 """, unsafe_allow_html=True)
         
